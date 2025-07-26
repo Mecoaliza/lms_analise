@@ -31,7 +31,8 @@ def segmentar_alunos_por_perfil(df, n_clusters=3):
     kmeans = KMeans(n_clusters=n_clusters, random_state=42)
     alunos['cluster'] = kmeans.fit_predict(X_scaled)
 
-    cluster_mean = alunos.groupby('cluster').mean().sort_values(by='interacoes_estudante')
+    cluster_mean = alunos.groupby('cluster')[['media_nota_estudante', 'interacoes_estudante', 'dias_ativos']].mean()
+    cluster_mean = cluster_mean.sort_values(by='interacoes_estudante')
     perfil_map = {idx: perfil for idx, perfil in zip(cluster_mean.index, ['Inativo', 'Regular', 'Engajado'])}
     alunos['perfil_aluno'] = alunos['cluster'].map(perfil_map)
 
@@ -40,19 +41,19 @@ def segmentar_alunos_por_perfil(df, n_clusters=3):
     return df
 
 
-def prever_churn_alunos(df, dias_limite=5):
+def prever_churn_alunos(df, dias_limite=2):
     """
     Cria um modelo de churn prediction com base em interações e notas.
-    Aluno "ativo" (0) → acessou nos últimos 5 dias
+    Aluno "ativo" (0) → acessou nos últimos 2 dias
 
-    Aluno "churn" (1) → não acessa há 5 dias ou mais
+    Aluno "churn" (1) → não acessa há 2 dias ou mais
 
     Parâmetros:
     - df: DataFrame com colunas: Estudante, ultimo_acesso, interacoes_estudante, dias_ativos, media_nota_estudante
     - dias_limite: número de dias sem acesso para considerar churn
 
     1. Calcula tempo desde o último acesso
-    2. Cria target: churn = 1 se inativo por mais de X dias
+    2. Cria target: churn = 1 se inativo por mais de 2 dias
     3. Remove duplicatas por aluno
     4. Prepara dados para ML
     5. Divide treino/teste e treina modelo

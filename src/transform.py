@@ -52,10 +52,6 @@ def comportamento_aluno(df):
     df['tempo_desde_ultimo'] = pd.to_datetime('now') - df['ultimo_acesso']
     df['dia'] = df['data_hora'].dt.date
     df['dias_ativos'] = df.groupby('Estudante')['dia'].transform('nunique')
+    df['media_nota_estudante'] = df.groupby('Estudante')['nota_num'].transform('mean')
 
-
-df = read_csv('./data/Dados.csv')
-normaliza_data(df)
-normaliza_notas(df)
-comportamento_aluno(df)
-print(df.head(5))
+    return df
