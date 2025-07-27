@@ -102,23 +102,23 @@ O churn é considerado quando o aluno não acessa a plataforma há 2 dias ou mai
 
 - Por essa razão, a **função de churn não foi aplicada diretamente** no pipeline principal do projeto, sendo apresentada aqui apenas como uma proposta inicial de modelagem.
 
-## Recomendações baseadas em insights dos dados
+# Recomendações baseadas em insights dos dados
 
-1. Aumentar atividades práticas nos horários de pico
+## 1. Aumentar atividades práticas nos horários de pico
 
 ![Análise no Power Bi](imagens/analise1.png) 
 
 - Existem um alto número de acessos no período da noite, com foco em conteúdo teórico.
 - Seria interessante incluir mais atividades práticas e avaliações rápidas
 
-2. Aumentar suporte em regiões com menor engajamento
+## 2. Aumentar suporte em regiões com menor engajamento
 
 ![Análise no Power Bi](imagens/analise2.png)
 
 - A região Sul se encontra com uma alta quantidade de acessos, mas as notas são baixas. Pois consomem mais conteúdos teóricos. 
 - Investigar o que pode está acontecendo, investir em campanhas de engajamento para os outros tipos de atividades ou oferecer suporte personalizado.
 
-3. Personalizar conteúdo com base no perfil de engajamento
+## 3. Personalizar conteúdo com base no perfil de engajamento
 
 ![Análise no Power Bi](imagens/analise3.png)
 
