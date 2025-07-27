@@ -9,19 +9,21 @@ Criando uma pipeline simples para transformação e segmentação das informaç�
 
 ## 📊 Objetivos
 
-- Tratar dados e criar campos a partir dos existentes para uma melhor análise
-- Segmentar alunos por desempenho e tipo de conteúdo
-- Criar campos calculados do comportamento dos alunos
-- Implementação de cluster e previsão de churn para identificar padrões e treinar dados
+- Tratar dados e criar campos a partir dos existentes para uma melhor análise.
+- Segmentar alunos por desempenho e tipo de conteúdo.
+- Criar campos calculados do comportamento dos alunos.
+- Implementação de Machine Learning com cluster e previsão de churn para identificar padrões e treinar dados.
 
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias e Bibliotecas
 
-- Python
+- Python (Pandas, Scikit-learn)
 - Power BI
 - Linguagem DAX
 
 ## 🛠️ Funcões
+
+Obs: A maioria das métricas foram realizadas no própio pipeline, vizando a reutização, automação, padronização e performance no Power BI, além de quem é possível aplicar métricas com modelos de Machine Learning.
 
 ### `normaliza_data(df)`
 
@@ -104,19 +106,19 @@ O churn é considerado quando o aluno não acessa a plataforma há 2 dias ou mai
 
 ![Análise no Power Bi](imagens/analise1.png) 
 
-     - Existem um alto número de acessos no período da noite, com foco em conteúdo teórico.
-     - Seria interessante incluir mais atividades práticas e avaliações rápidas
+- Existem um alto número de acessos no período da noite, com foco em conteúdo teórico.
+- Seria interessante incluir mais atividades práticas e avaliações rápidas
 
 2. Aumentar suporte em regiões com menor engajamento
 
 ![Análise no Power Bi](imagens/analise2.png)
 
-    - A região Sul se encontra com uma alta quantidade de acessos, mas as notas são baixas. Pois consomem mais conteúdos teóricos. 
-    - Investigar o que pode está acontecendo, investir em campanhas de engajamento para os outros tipos de atividades ou oferecer suporte personalizado.
+- A região Sul se encontra com uma alta quantidade de acessos, mas as notas são baixas. Pois consomem mais conteúdos teóricos. 
+- Investigar o que pode está acontecendo, investir em campanhas de engajamento para os outros tipos de atividades ou oferecer suporte personalizado.
 
 3. Personalizar conteúdo com base no perfil de engajamento
 
 ![Análise no Power Bi](imagens/analise3.png)
 
-    - Alguns alunos classificados como engajados (medidos pela média de notas, número de interações e dias ativos), ainda aparecem com notas baixas. 
-    - Entender mais profundamente a causa e criar trilhas personalizadas que equilibrem teoria, prática e avaliação.
+- Alguns alunos classificados como engajados (medidos pela média de notas, número de interações e dias ativos), ainda aparecem com notas baixas. 
+- Entender mais profundamente a causa e criar trilhas personalizadas que equilibrem teoria, prática e avaliação.
