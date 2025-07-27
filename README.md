@@ -5,6 +5,8 @@
 Este projeto utiliza dados de interação com um LMS para explorar padrões de uso, engajamento dos alunos e desempenho.
 Criando uma pipeline simples para transformação e segmentação das informações.
 
+[Baixar relatório Power BI (.pbix)](relatorio/analise.pbix)
+
 ## 📊 Objetivos
 
 - Tratar dados e criar campos a partir dos existentes para uma melhor análise
