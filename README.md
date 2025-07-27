@@ -46,6 +46,8 @@ Criando uma pipeline simples para transformação e segmentação das informaç�
 
 ### `comportamento_aluno(df)`
 
+![Análise no Power Bi](imagens/comportament_aluno.png)
+
 - Calcula a quantidade de interações por:
   - Estudante (`interacoes_estudante`)
   - Curso (`interacoes_curso`)
