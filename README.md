@@ -1,5 +1,7 @@
 # Análise de LMS (Learning Management System)
 
+![Análise no Power Bi](imagens/visao_geral.png)
+ 
 Este projeto utiliza dados de interação com um LMS para explorar padrões de uso, engajamento dos alunos e desempenho.
 Criando uma pipeline simples para transformação e segmentação das informações.
 
@@ -61,6 +63,7 @@ Criando uma pipeline simples para transformação e segmentação das informaç�
 
 ### 📊 Segmentação de Alunos por Perfil
 
+![Análise no Power Bi](imagens/segmentacao_acesso.png)
 
  - Técnicas de Machine Learning para segmentar alunos com base no engajamento e desempenho
 
