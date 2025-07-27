@@ -23,7 +23,9 @@ Criando uma pipeline simples para transformação e segmentação das informaç�
 
 ## 🛠️ Funcões
 
-Obs: A maioria das métricas foram realizadas no própio pipeline, vizando a reutização, automação, padronização e performance no Power BI, além de quem é possível aplicar métricas com modelos de Machine Learning.
+💡 **Observação:**  
+> A maioria das métricas foi calculada no próprio pipeline, visando **reutilização**, **automação**, **padronização** e **melhoria de performance** no Power BI.  
+> Além disso, essa abordagem permite aplicar métricas com uso de **modelos de Machine Learning**, o que não seria possível diretamente no Power BI.
 
 ### `normaliza_data(df)`
 
@@ -94,7 +96,7 @@ O churn é considerado quando o aluno não acessa a plataforma há 2 dias ou mai
 
 > A função `prever_churn_alunos()` insere essa estimativa no DataFrame final.
 
-## Observações Importantes
+💡 **Observações importantes:** 
 
 - Este projeto foi construído a partir de uma base de dados pequena e fictícia, portanto, **os resultados não devem ser considerados definitivos**. É essencial ter um volume maior de dados para garantir maior **precisão** e **robustez** das análises.
 
