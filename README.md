@@ -57,4 +57,36 @@ Criando uma pipeline simples para transformação e segmentação das informaç�
   - `dias_ativos` (número de dias únicos com acesso)
   - `media_nota_estudante` (média das notas numéricas)
 
+### 📊 Segmentação de Alunos por Perfil
 
+
+ - Técnicas de Machine Learning para segmentar alunos com base no engajamento e desempenho
+
+ O script aplica o algoritmo de **K-Means Clustering** para identificar perfis de alunos a partir de três variáveis principais:
+- Média de notas do estudante
+- Número de interações na plataforma
+- Dias ativos
+
+Os alunos são agrupados em três perfis:
+- **Inativo**
+- **Regular**
+- **Engajado**
+
+A função `segmentar_alunos_por_perfil()` retorna um DataFrame com a nova coluna `perfil_aluno`.
+
+### 🔮 Previsão de Churn (Risco de Evasão)
+
+Foi implementado também um modelo preditivo de churn utilizando **Random Forest Classifier** com as seguintes variáveis:
+- Interações do estudante
+- Dias ativos
+- Média de notas
+
+O churn é considerado quando o aluno não acessa a plataforma há 2 dias ou mais. O modelo retorna uma estimativa de risco (`churn_risco`) entre 0 e 1.
+
+> A função `prever_churn_alunos()` insere essa estimativa no DataFrame final.
+
+## Observações Importantes
+
+- Este projeto foi construído a partir de uma base de dados pequena e, portanto, **os resultados não devem ser considerados definitivos**. É essencial ter um volume maior de dados para garantir maior **precisão** e **robustez** das análises.
+
+- Por essa razão, a **função de churn não foi aplicada diretamente** no pipeline principal do projeto, sendo apresentada aqui apenas como uma proposta inicial de modelagem.
